@@ -10,6 +10,8 @@ import { PlantaService } from '../planta.service';
 export class PlantaListaComponent implements OnInit {
 
   plantas: Planta[] = [];
+  plantasInterior: number = 0;
+  plantasExterior: number = 0;
 
   constructor(private plantaService: PlantaService) {} 
 
@@ -18,6 +20,8 @@ export class PlantaListaComponent implements OnInit {
   getDirectores(): void {
     this.plantaService.getPlantas().subscribe((plantas:Planta[]) => {
       this.plantas = plantas;
+      this.plantasInterior = plantas.filter(item => item.tipo === 'Interior').length;
+      this.plantasExterior = plantas.filter(item => item.tipo === 'Exterior').length;
     });
   }
 
