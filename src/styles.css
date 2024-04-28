@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+.img-header {
+    max-height: 200px;
+}
+
+body {
+    padding: 1em;
+}
+
+footer{
+    flex-shrink: 0;
+    background: gray; 
+}

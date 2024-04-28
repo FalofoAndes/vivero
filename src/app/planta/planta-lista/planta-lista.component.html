@@ -1,0 +1,29 @@
+<h1>Vivero El Otoño</h1>
+<hr class="hr" />
+<img src="/assets/img/vivero.jpg" class="img-fluid w-100 img-header" alt="Responsive image">
+<hr class="hr" />
+<div class="container-fluid col-12">
+  <div class="row">
+    <!-- Columna de la tabla -->
+    <div class="col-12 col-md-6 scroll-container">
+      <table class="table table-striped ">
+        <thead class="thead-dark">
+          <tr>
+            <th class="h4" style="position: sticky; top: 0">#</th>
+            <th class="h4" style="position: sticky; top: 0">Nombre común</th>
+            <th class="h4" style="position: sticky; top: 0">Tipo</th>
+            <th class="h4" style="position: sticky; top: 0">Clima</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let planta of plantas; index as i ">
+            <td class="align-middle">{{ i }}</td>
+            <td class="align-middle">{{ planta.nombre_comun }}</td>
+            <td class="align-middle">{{ planta.tipo }}</td>
+            <td class="align-middle">{{ planta.clima}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
